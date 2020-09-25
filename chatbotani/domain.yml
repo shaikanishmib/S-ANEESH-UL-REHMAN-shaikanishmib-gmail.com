@@ -1,0 +1,84 @@
+intents:
+  - greet
+  - goodbye
+  - confirm_deny
+  - pizza_and_type
+  - pizza
+  - pizza_menu
+  - pizza_type
+  - pizza_size
+  - user_details
+  - thanks
+  - pizza_and_type_and_size
+  - track_order
+  - affirm
+  - Name
+  - Selected_Pizza
+  - mobile_no
+entities:
+  - size
+  - pizza
+  - mobile_no
+  - Name
+
+actions:
+  - action_confirm_order
+  - action_order_status
+
+slots:
+  size:
+    type: text
+    auto_fill: True
+  pizza:
+    type: text
+    auto_fill: False
+  Name:
+    type: text
+    auto_fill: False
+  mobile_no:
+    type: text
+    auto_fill: False
+  order_id:
+    type: text
+    auto_fill: False
+responses:
+  utter_greet:
+  - text: "Hey! I am emilia from yoyo pizza!...How can I help you?"
+  
+  utter_pizza_list: 
+  - text: "Here is the list of pizzas Available\ \nMargherita\ \nDouble Cheese Margherita\ \nFarmhouse\ \nDeluxe Veggie\ \nMexican Green Wave\ \nPEPPER BARBECUE CHICKEN\ \nChicken Golden Delight\ \nNon Veg Supreme\ \nChicken Dominator\ \nIndi Chicken Tikka"
+
+  utter_pizza_size:
+  - text: "Here is the list of sizes available\ \nSmall\ \nMedium\ \nLarge\ \nExtra Large"
+  
+  utter_ask_for_pizza:
+  - text: "Which pizza would you like to have?"
+  
+  utter_ask_for_size:
+  - text: "Which size of pizza would you like to have?"
+  
+  utter_Name:
+  - text: "Please provide your name"
+  
+  utter_issue_order_id:
+  - text: "Here is your {mobile_no}"
+  - text: "you have made an oder for {size} size {pizza} pizza"
+  
+  utter_thanks:
+  - text: "Thank you for visiting us. Have a good day"
+
+  utter_ask_for_order_id:
+  - text: "can you me give me the order id"
+  utter_order_status:
+  - text: "you order status is"
+  utter_selected_pizza:
+  - text: "kindly tell your selected pizza"
+  utter_mobile_no:
+  - text: "kndly tell your contact number"
+
+  utter_goodbye:
+  - text: "Bye"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
